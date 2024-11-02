@@ -11,11 +11,26 @@ functions:
   priceForecast:
     handler: src/app.lambda_handler
     timeout: 900
+    layers:
+      - { Ref: DependenciesLayer }
     events:
       - http:
           path: forecast
           method: get
 
+layers:
+  dependenciesLayer:
+    path: layer
+    name: ffxiv-price-forecaster-layer
+    compatibleRuntimes:
+      - python3.11
+
 plugins:
   - serverless-python-requirements
 #  - serverless-offline
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    layer: true
+    slim: true
