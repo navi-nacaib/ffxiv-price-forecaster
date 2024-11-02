@@ -2,7 +2,7 @@ service: ffxiv-price-forecaster
 
 provider:
   name: aws
-  runtime: python3.11
+  runtime: python3.9
   region: us-west-1
   environment:
     PYTHONPATH: ./src
