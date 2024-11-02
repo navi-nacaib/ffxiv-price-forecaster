@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ffxiv-price-predictor.iml" filepath="$PROJECT_DIR$/.idea/ffxiv-price-predictor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ffxiv-price-forecaster.iml" filepath="$PROJECT_DIR$/.idea/ffxiv-price-forecaster.iml" />
     </modules>
   </component>
 </project>

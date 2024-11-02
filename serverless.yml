@@ -1,0 +1,21 @@
+service: ffxiv-price-forecaster
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: us-west-1
+  environment:
+    PYTHONPATH: ./src
+
+functions:
+  priceForecast:
+    handler: src/app.lambda_handler
+    timeout: 900
+    events:
+      - http:
+          path: forecast
+          method: get
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
