@@ -12,7 +12,6 @@ functions:
   priceForecast:
     image:
       name: forecastImage
-    handler: src/app.lambda_handler
     timeout: 900
     memorySize: 4096
     environment:
