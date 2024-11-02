@@ -12,14 +12,14 @@ functions:
     handler: src/app.lambda_handler
     timeout: 900
     layers:
-      - { Ref: dependenciesLayer }
+      - { Ref: DependenciesLayer }
     events:
       - http:
           path: forecast
           method: get
 
 layers:
-  dependenciesLayer:
+  DependenciesLayer:
     path: layer
     name: ffxiv-price-forecaster-layer
     compatibleRuntimes:
