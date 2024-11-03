@@ -7,6 +7,7 @@ from forecast.data_processing import fetch_data
 def lambda_handler(event, context):
     try:
         # Set the working directory to `/tmp` to redirect any writes there
+        # Uncomment when deploying
         os.chdir("/tmp")
 
         # Fetch data from Universalis API

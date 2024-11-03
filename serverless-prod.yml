@@ -21,6 +21,6 @@ functions:
           path: forecast
           method: get
 
-#plugins:
-#  - serverless-python-requirements
-#  - serverless-offline
+plugins:
+  - serverless-python-requirements
+  - serverless-offline

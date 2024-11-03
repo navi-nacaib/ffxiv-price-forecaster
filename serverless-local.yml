@@ -1,0 +1,28 @@
+service: ffxiv-price-forecaster
+
+provider:
+  name: aws
+  region: us-west-1
+  runtime: python3.11
+  environment:
+    PYTHONPATH: ./src
+
+functions:
+  priceForecast:
+    handler: src/app.lambda_handler  # Using handler for serverless-offline
+    timeout: 900
+    memorySize: 2048
+    events:
+      - http:
+          path: forecast
+          method: get
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    layer: true
+    slim: true
