@@ -20,7 +20,3 @@ functions:
       - http:
           path: forecast
           method: get
-
-plugins:
-  - serverless-python-requirements
-  - serverless-offline
