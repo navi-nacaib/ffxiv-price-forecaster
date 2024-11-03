@@ -1,10 +1,14 @@
 import json
+import os
 from forecast.neuralprophet_forecast import generate_forecast
 from forecast.data_processing import fetch_data
 
 
 def lambda_handler(event, context):
     try:
+        # Set the working directory to `/tmp` to redirect any writes there
+        os.chdir("/tmp")
+
         # Fetch data from Universalis API
         data = fetch_data()
 
