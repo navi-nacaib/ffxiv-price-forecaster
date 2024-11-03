@@ -8,7 +8,7 @@ ENV PYTHONPATH=/var/task/src
 COPY src/ /var/task/src/
 
 # Copy layer-specific requirements.txt to install Lambda dependencies
-COPY layer/requirements.txt /var/task/layer_requirements.txt
+COPY requirements.txt /var/task/layer_requirements.txt
 
 # Install dependencies for Lambda execution, targeting /var/task (Lambda’s default code directory)
 RUN pip install -r /var/task/layer_requirements.txt --target /var/task/
