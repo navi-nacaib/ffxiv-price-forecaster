@@ -13,7 +13,7 @@ functions:
     image:
       name: forecastImage
     timeout: 900
-    memorySize: 4096
+    memorySize: 2048
     environment:
       PYTHONPATH: /var/task/src
     events:
